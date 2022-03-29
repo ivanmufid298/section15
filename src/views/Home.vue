@@ -10,18 +10,18 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import ListBerita from '@/components/ListBerita.vue';
+
+import ListBerita from '@/components/ListBerita.vue'
 export default {
   components: { ListBerita },
-  name: "App",
-  computed:{
-    listBerita(){
-      return this.$store.state.listBerita;
+  name: 'App',
+  computed: {
+    listBerita () {
+      return this.$store.state.listBerita
     }
   },
-  mounted(){
-    this.$store.dispatch("fetchBerita");
-  },
-};
+  mounted () {
+    this.$store.dispatch('fetchBerita')
+  }
+}
 </script>

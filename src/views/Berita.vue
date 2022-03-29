@@ -12,9 +12,9 @@
 <script>
 export default {
   computed: {
-    berita() {
-      return this.$store.state.berita;
-    },
-  },
+    berita () {
+      return this.$store.state.berita
+    }
+  }
 }
 </script>

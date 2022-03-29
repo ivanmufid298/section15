@@ -25,7 +25,6 @@
 #nav .news {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-  /* grid-column: 2fr; */
   grid-gap: 20px;
 }
 </style>

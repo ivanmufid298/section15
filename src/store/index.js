@@ -26,7 +26,7 @@ export default new Vuex.Store({
   },
   actions: {
     fetchBerita (store) {
-      axios.get('https://newsapi.org/v2/top-headlines?country=id&apiKey=cde232c8f71b47a1b7b281be2c0eefc2').then(response => {
+      axios.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=99da639dc1ce4117912c24440c9ecf6d').then(response => {
         store.commit('setListBerita', response.data.articles)
       })
     },
