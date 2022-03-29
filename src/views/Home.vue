@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="nav">
+      <h1>Berita Terkini </h1>
+      <div class="news">
+        <list-berita v-for="(berita, index) in listBerita" :berita="berita" :key="index"></list-berita>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import ListBerita from '@/components/ListBerita.vue';
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  components: { ListBerita },
+  name: "App",
+  computed:{
+    listBerita(){
+      return this.$store.state.listBerita;
+    }
+  },
+  mounted(){
+    this.$store.dispatch("fetchBerita");
+  },
+};
 </script>
